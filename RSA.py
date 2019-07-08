@@ -28,7 +28,14 @@ class RSA:
 	
 	@staticmethod
 	def bigPrime(l : int) -> int:
-		
+        """bigPrime Génère un nombre premier de 'l' bits
+        
+        Args:
+            l (int): Taille en bit du nombre
+        
+        Returns:
+            int: Nombre premier sur l bits 
+        """		
 		# Génère un nombre aléatoire de l-bits (impair)
 		n = rd.getrandbits(l) | 1
 		n |= (1 << l - 1)
@@ -83,7 +90,16 @@ class RSA:
 	
 	@staticmethod
 	def EA(a : int, b : int) -> int:
-	
+        """
+        EEA Méthode pour déterminer le PGCD de deux nombre entier
+        
+        Args:
+            a (int): Premier nombre entier
+            b (int): Second nombre entier
+        
+        Returns:
+            int : Plus grand commun diviseur des nombre a et b
+        """	
 
 		# Cas de base
 		if (b == 0): return a
